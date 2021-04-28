@@ -38,6 +38,7 @@ print(obs_data.shape)
 
 
 # %%
+plt.figure(10)
 plot_model(vae.encoder, to_file='./vae/encoder.png', show_shapes=True)
 plot_model(vae.decoder, to_file='./vae/decoder.png', show_shapes=True)
 
@@ -56,7 +57,7 @@ for idx in range(0,300):
     plt.subplot(122)
     plt.imshow( z_decoded)
     
-#     plt.show()
+    plt.show()
     display.clear_output(wait=True)
     display.display(plt.gcf()) 
 
