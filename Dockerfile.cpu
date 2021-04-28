@@ -17,7 +17,7 @@ RUN apt-get -y update && apt-get install -y cmake swig python3-dev \
 
 COPY ./requirements.txt /
 RUN python3 -m pip install --upgrade pip
-RUN pip install -r /requirements.txt
+RUN pip install -r /requirements.txt --use-deprecated=legacy-resolver
 
 # -m option creates a fake writable home folder for Jupyter.
 RUN groupadd -g $groupid $username \
