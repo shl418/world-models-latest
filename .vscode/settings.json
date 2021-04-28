@@ -1,6 +1,6 @@
 {
     "git.ignoreLimitWarning": true,
     "python.envFile": "${workspaceFolder}/.env",
-    "jupyter.jupyterServerType": "remote",
+    "jupyter.jupyterServerType": "local",
     "terminal.integrated.shell.linux": "/bin/bash"
 }

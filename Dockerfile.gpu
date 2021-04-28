@@ -12,9 +12,9 @@ ARG userid=1001
 # 1000
 ## end modify
 
-RUN apt-get -y update && apt-get install -y cmake swig python3-dev \
+RUN apt-get -y update && apt-get install -y cmake swig python3-dev python3-tk \
     zlib1g-dev python-opengl mpich xvfb \
-    xserver-xephyr vnc4server
+    xserver-xephyr vnc4server graphviz
 
 COPY ./requirements.txt /
 RUN python3 -m pip install --upgrade pip
