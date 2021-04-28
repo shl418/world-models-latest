@@ -10,9 +10,10 @@ ARG groupid=1000
 ARG userid=1000
 ## end modify
 
+ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get -y update && apt-get install -y cmake swig python3-dev \
     zlib1g-dev python-opengl mpich xvfb \
-    xserver-xephyr vnc4server
+    xserver-xephyr vnc4server graphviz
 
 COPY ./requirements.txt /
 RUN python3 -m pip install --upgrade pip

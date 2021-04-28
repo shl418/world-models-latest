@@ -12,6 +12,7 @@ ARG userid=1001
 # 1000
 ## end modify
 
+ENV DEBIAN_FRONTEND=noninteractive 
 RUN apt-get -y update && apt-get install -y cmake swig python3-dev python3-tk \
     zlib1g-dev python-opengl mpich xvfb \
     xserver-xephyr vnc4server graphviz
