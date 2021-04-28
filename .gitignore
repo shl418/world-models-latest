@@ -13,6 +13,7 @@ rnn/*.json
 vae/*.png
 rnn/*.png
 log/
+.venv/
 
 copy_files.sh
 
