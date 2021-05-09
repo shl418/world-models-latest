@@ -22,7 +22,6 @@ def get_filelist(N):
 
     if length_filelist < N:
       N = length_filelist
-
     return filelist, N
 
 
@@ -68,7 +67,6 @@ def random_batch(filelist, batch_size):
 	action_list = np.array(action_list)
 	rew_list = np.array(rew_list)
 	done_list = np.array(done_list)
-
 	return z_list, action_list, rew_list, done_list
 
 def main(args):
@@ -83,6 +81,7 @@ def main(args):
 	if not new_model:
 		try:
 			rnn.set_weights('./rnn/weights.h5')
+			# rnn.set_weights('./rnn/weights_epoch-1_batch-512_steps-4000_lr=1e-4.h5')
 		except:
 			print("Either set --new_model or ensure ./rnn/weights.h5 exists")
 			raise
@@ -107,7 +106,7 @@ def main(args):
 		rnn.train(rnn_input, rnn_output)
 
 		if step % 10 == 0:
-
+			# pass
 			rnn.model.save_weights('./rnn/weights.h5')
 
 	rnn.model.save_weights('./rnn/weights.h5')

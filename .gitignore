@@ -1,5 +1,7 @@
 __pycache__/
 .ipynb_checkpoints/
+controller/car_racing.cma.1.4.es.pk
+.vscode/
 archive/
 videos/
 data/*/*.npz
@@ -14,8 +16,6 @@ vae/*.png
 rnn/*.png
 log/
 .venv/
-
 copy_files.sh
-
 *.pyc
 .DS_Store

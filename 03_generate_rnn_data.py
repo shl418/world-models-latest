@@ -47,7 +47,7 @@ def encode_episode(vae, episode):
 
 def main(args):
 
-    N = args.N
+    N = int(args.N)
 
     vae = VAE()
 
